@@ -1,1 +1,9 @@
-# markdown-to-html-parser
+## このリポジトリについて
+
+TypeScript で Markdown を解析するプロジェクトです。
+
+- Markdown の基本構文を文字列として受け取り
+- AST（抽象構文木）に変換し
+- HTML として出力する
+
+という一連のパース処理を、実装していきます。
