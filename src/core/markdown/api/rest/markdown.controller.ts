@@ -7,7 +7,7 @@ export class MarkdownController {
   constructor(private readonly markdownService: MarkdownService) {}
 
   @Get()
-  getHello(): any {
+  getHello(): string {
     return this.markdownService.getHello();
   }
 }
