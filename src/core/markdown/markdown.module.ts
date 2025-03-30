@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './api/rest/markdown.controller';
-import { AppService } from './usecase/markdown.service';
+import { MarkdownController } from './api/rest/markdown.controller';
+import { MarkdownService } from './usecase/markdown.service';
 
 @Module({
   imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [MarkdownController],
+  providers: [MarkdownService],
 })
-export class AppModule {}
+export class MarkdownModule {}

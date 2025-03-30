@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from '../../usecase/markdown.service';
+import { MarkdownService } from '../../usecase/markdown.service';
 
 @Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+export class MarkdownController {
+  constructor(private readonly markdownService: MarkdownService) {}
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return this.markdownService.getHello();
   }
 }
