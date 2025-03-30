@@ -1,5 +1,6 @@
 import { Controller, Get } from "@nestjs/common";
-import type { MarkdownService } from "../../usecase/markdown.service";
+// biome-ignore lint/style/useImportType: 
+import { MarkdownService } from "../../usecase/markdown.service";
 
 @Controller()
 export class MarkdownController {
