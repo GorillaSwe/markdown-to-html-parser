@@ -1,0 +1,29 @@
+name: CI ▶︎ Biome
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow}}-${{ github.event.pull_request.number}}
+  cancel-in-progress: true
+
+jobs:
+  biome:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Biome
+        uses: mongolyy/reviewdog-action-biome@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          level: warning
+          reporter: github-pr-review
+          fail_level: error
